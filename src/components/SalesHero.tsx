@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Check, Clock, Heart } from "lucide-react";
+import { ArrowRight, Check, X, Clock, Brain, Smartphone, Dumbbell } from "lucide-react";
 import heroImage from "@/assets/hero-woman-healthy.jpg";
 
 export const SalesHero = () => {
@@ -17,69 +17,32 @@ export const SalesHero = () => {
       
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                <span className="text-destructive">Emagreça</span>{" "}
-                <span className="text-primary">Sem Radicalismo:</span>{" "}
-                Descubra o Segredo de Mulheres 30+ que{" "}
-                <span className="text-accent">Pararam de Sofrer</span> com Dietas.
+                <span className="text-destructive">Você Já Tentou De Tudo.</span>{" "}
+                Agora é Hora De{" "}
+                <span className="text-primary">Emagrecer Sem Sofrimento.</span>
               </h1>
               
               {/* Subheadline */}
-              <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                Você não precisa cortar tudo. Só precisa saber a{" "}
-                <span className="text-primary font-semibold">hora certa:</span>{" "}
-                depois das 18h, seu corpo decide seu destino.
+              <p className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
+                Descubra o método silencioso que mais de{" "}
+                <span className="text-primary font-semibold">10.000 mulheres 30+</span>{" "}
+                usaram pra secar sem dietas radicais — só controlando o{" "}
+                <span className="text-accent font-semibold">horário certo</span> de comer carboidrato.
               </p>
             </div>
 
-            {/* Pain + Solution Block */}
-            <Card className="p-6 bg-card/50 border-l-4 border-l-accent shadow-lg">
-              <p className="text-lg text-card-foreground leading-relaxed">
-                <span className="text-destructive font-semibold">
-                  Você já tentou mil dietas.
-                </span>{" "}
-                Algumas funcionaram... por uma semana. O problema não é você.{" "}
-                <span className="text-primary font-semibold">É o método.</span>{" "}
-                A filosofia do 1% melhor é diferente:{" "}
-                <span className="text-accent font-semibold">
-                  sem pressão, sem neurose.
-                </span>
-              </p>
-            </Card>
-
-            {/* Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="flex items-center space-x-3 bg-success/10 p-4 rounded-lg">
-                <Check className="text-success" size={20} />
-                <span className="text-sm font-medium">Sem Radicalismos</span>
-              </div>
-              <div className="flex items-center space-x-3 bg-primary/10 p-4 rounded-lg">
-                <Clock className="text-primary" size={20} />
-                <span className="text-sm font-medium">Após as 18h</span>
-              </div>
-              <div className="flex items-center space-x-3 bg-accent/10 p-4 rounded-lg">
-                <Heart className="text-accent" size={20} />
-                <span className="text-sm font-medium">1% Melhor</span>
-              </div>
-            </div>
-
-            {/* CTA */}
+            {/* CTA Principal */}
             <div className="space-y-4">
-              <p className="text-xl font-semibold text-primary">
-                Comece HOJE com o que você tem. Um clique. Um capítulo. Uma mudança de mentalidade.
-              </p>
-              <Button variant="hero" size="lg" className="w-full md:w-auto">
-                Transformar Minha Vida Agora
-                <ArrowRight className="ml-2" size={20} />
+              <Button variant="hero" size="lg" className="w-full md:w-auto text-lg px-8 py-4">
+                Quero Emagrecer Sem Sofrimento – Começar Agora
+                <ArrowRight className="ml-2" size={24} />
               </Button>
-              <p className="text-sm text-muted-foreground">
-                ✓ Sem compromisso inicial • ✓ Resultados em 7 dias • ✓ Garantia total
-              </p>
             </div>
           </div>
 
@@ -89,36 +52,146 @@ export const SalesHero = () => {
               <img
                 src={heroImage}
                 alt="Mulher confiante e saudável"
-                className="w-full h-[600px] object-cover"
+                className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="bg-muted/30 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+            Elas Conseguiram. <span className="text-primary">Você Também Pode.</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="p-6 bg-background shadow-lg border-l-4 border-l-primary">
+              <p className="text-lg text-card-foreground leading-relaxed mb-4">
+                "Achei que era mais uma promessa furada. Em 2 semanas meu inchaço sumiu, em 2 meses: -8kg. Sem cortar comida, só mudei a hora."
+              </p>
+              <p className="text-sm text-muted-foreground font-semibold">
+                – Camila, 39
+              </p>
+            </Card>
             
-            {/* Floating testimonial */}
-            <Card className="absolute -bottom-6 -left-6 p-4 bg-background shadow-xl border-l-4 border-l-accent max-w-xs">
-              <p className="text-sm font-medium text-card-foreground">
+            <Card className="p-6 bg-background shadow-lg border-l-4 border-l-accent">
+              <p className="text-lg text-card-foreground leading-relaxed mb-4">
                 "Perdi 8kg em 2 meses sem passar fome. O segredo estava na hora!"
               </p>
-              <p className="text-xs text-muted-foreground mt-2">
-                - Maria, 34 anos
+              <p className="text-sm text-muted-foreground font-semibold">
+                – Maria, 34
               </p>
             </Card>
           </div>
         </div>
       </div>
 
-      {/* Social Proof Section */}
-      <div className="bg-muted/50 py-12">
+      {/* App Features */}
+      <div className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+            O Que Você Vai Encontrar no App
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="flex items-start space-x-4 bg-destructive/10 p-6 rounded-lg">
+              <X className="text-destructive mt-1 flex-shrink-0" size={24} />
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Chega de dietas que te culpam</h3>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4 bg-primary/10 p-6 rounded-lg">
+              <Clock className="text-primary mt-1 flex-shrink-0" size={24} />
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">O Segredo: corte seletivo após as 18h</h3>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4 bg-accent/10 p-6 rounded-lg">
+              <Smartphone className="text-accent mt-1 flex-shrink-0" size={24} />
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Capítulos simples e cardápios realistas</h3>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4 bg-success/10 p-6 rounded-lg">
+              <Dumbbell className="text-success mt-1 flex-shrink-0" size={24} />
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Exercícios que cabem até no banho</h3>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4 bg-warning/10 p-6 rounded-lg md:col-span-2 lg:col-span-1">
+              <Brain className="text-warning mt-1 flex-shrink-0" size={24} />
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Mindset para vencer sabotagens internas</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Final CTA */}
+      <div className="bg-gradient-to-r from-primary/20 to-accent/20 py-16">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-muted-foreground mb-6">
-            Mais de 10.000 mulheres já transformaram suas vidas
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Comece com <span className="text-primary">1% Hoje</span>
+          </h2>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Não precisa de força sobre-humana. Só precisa de um clique.
           </p>
-          <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="text-2xl font-bold">⭐⭐⭐⭐⭐</div>
-            <span className="text-lg font-semibold">4.9/5 estrelas</span>
-            <span className="text-sm text-muted-foreground">
-              baseado em 2.847 avaliações
-            </span>
+          
+          <Button variant="hero" size="lg" className="text-lg px-8 py-4 mb-6">
+            Transformar Minha Vida Agora
+            <ArrowRight className="ml-2" size={24} />
+          </Button>
+          
+          <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 max-w-md mx-auto">
+            <p className="text-destructive font-semibold flex items-center justify-center">
+              ⚠️ Vagas limitadas: acesso antecipado para as primeiras 100 mulheres.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+            Perguntas Frequentes
+          </h2>
+          
+          <div className="max-w-3xl mx-auto space-y-6">
+            <Card className="p-6 bg-background shadow-sm">
+              <h3 className="font-semibold text-foreground mb-3 text-lg">
+                Funciona pra qualquer idade?
+              </h3>
+              <p className="text-muted-foreground">
+                Sim. Ideal para mulheres 30+, mas funciona para qualquer idade.
+              </p>
+            </Card>
+            
+            <Card className="p-6 bg-background shadow-sm">
+              <h3 className="font-semibold text-foreground mb-3 text-lg">
+                Preciso cortar tudo depois das 18h?
+              </h3>
+              <p className="text-muted-foreground">
+                Não. Só os carboidratos — você continua comendo bem.
+              </p>
+            </Card>
+            
+            <Card className="p-6 bg-background shadow-sm">
+              <h3 className="font-semibold text-foreground mb-3 text-lg">
+                Tem que fazer exercício?
+              </h3>
+              <p className="text-muted-foreground">
+                Só se quiser. Até atividade leve já ajuda, tipo movimentos no banho.
+              </p>
+            </Card>
           </div>
         </div>
       </div>
