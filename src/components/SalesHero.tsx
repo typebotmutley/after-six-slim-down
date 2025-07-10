@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Check, X, Clock, Brain, Smartphone, Dumbbell } from "lucide-react";
-import heroImage from "@/assets/hero-woman-healthy.jpg";
+import { ArrowRight, Check, X, Clock, Brain, Smartphone, Dumbbell, Star } from "lucide-react";
+import heroImage from "@/assets/transformation-real.jpg";
+import { CountdownTimer } from "./CountdownTimer";
+import { FloatingCTA } from "./FloatingCTA";
 
 export const SalesHero = () => {
   return (
@@ -22,10 +24,9 @@ export const SalesHero = () => {
           <div className="space-y-8">
             {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                <span className="text-destructive">Você Já Tentou De Tudo.</span>{" "}
-                Agora é Hora De{" "}
-                <span className="text-primary">Emagrecer Sem Sofrimento.</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <span className="text-foreground font-black">Você Já Tentou De Tudo.</span>{" "}
+                <span className="text-primary font-black">Agora é Hora De Emagrecer Sem Sofrimento.</span>
               </h1>
               
               {/* Subheadline */}
@@ -51,10 +52,22 @@ export const SalesHero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={heroImage}
-                alt="Mulher confiante e saudável"
+                alt="Transformação real de mulher que emagreceu"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+              
+              {/* Prova social visual sobre a imagem */}
+              <div className="absolute bottom-4 left-4 bg-background/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+                <div className="flex items-center space-x-1 mb-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-sm font-semibold text-foreground">
+                  4.9 de 2.847 mulheres satisfeitas
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -69,21 +82,41 @@ export const SalesHero = () => {
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="p-6 bg-background shadow-lg border-l-4 border-l-primary">
+              <div className="flex items-center space-x-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
               <p className="text-lg text-card-foreground leading-relaxed mb-4">
                 "Achei que era mais uma promessa furada. Em 2 semanas meu inchaço sumiu, em 2 meses: -8kg. Sem cortar comida, só mudei a hora."
               </p>
-              <p className="text-sm text-muted-foreground font-semibold">
-                – Camila, 39
-              </p>
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold text-sm">C</span>
+                </div>
+                <p className="text-sm text-muted-foreground font-semibold">
+                  Camila, 39 anos
+                </p>
+              </div>
             </Card>
             
             <Card className="p-6 bg-background shadow-lg border-l-4 border-l-accent">
+              <div className="flex items-center space-x-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
               <p className="text-lg text-card-foreground leading-relaxed mb-4">
                 "Perdi 8kg em 2 meses sem passar fome. O segredo estava na hora!"
               </p>
-              <p className="text-sm text-muted-foreground font-semibold">
-                – Maria, 34
-              </p>
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
+                  <span className="text-accent font-bold text-sm">M</span>
+                </div>
+                <p className="text-sm text-muted-foreground font-semibold">
+                  Maria, 34 anos
+                </p>
+              </div>
             </Card>
           </div>
         </div>
@@ -150,11 +183,7 @@ export const SalesHero = () => {
             <ArrowRight className="ml-2" size={24} />
           </Button>
           
-          <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 max-w-md mx-auto">
-            <p className="text-destructive font-semibold flex items-center justify-center">
-              ⚠️ Vagas limitadas: acesso antecipado para as primeiras 100 mulheres.
-            </p>
-          </div>
+          <CountdownTimer />
         </div>
       </div>
 
@@ -195,6 +224,9 @@ export const SalesHero = () => {
           </div>
         </div>
       </div>
+      
+      {/* Botão CTA Flutuante */}
+      <FloatingCTA />
     </div>
   );
 };
