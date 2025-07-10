@@ -6,8 +6,17 @@ import heroImage from "@/assets/hero-woman-healthy.jpg";
 export const SalesHero = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-secondary/30 to-background">
+      {/* Header with App Name */}
+      <div className="container mx-auto px-4 py-4">
+        <div className="text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary">
+            Yes! You Can Eat
+          </h2>
+        </div>
+      </div>
+      
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
           <div className="space-y-8">
