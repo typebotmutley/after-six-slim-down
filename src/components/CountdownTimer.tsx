@@ -19,14 +19,14 @@ export const CountdownTimer = () => {
   return (
     <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4 max-w-md mx-auto">
       <p className="text-destructive font-semibold text-center mb-2">
-        ⏰ Essa janela expira em{" "}
+        ⏰ Sua chance de iniciar sem bloqueios expira em{" "}
         <span className="text-lg font-bold">
           {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
         </span>{" "}
         min
       </p>
       <p className="text-destructive/80 text-sm text-center">
-        Após isso, o acesso gratuito pode ser fechado.
+        A próxima turma pode exigir convite ou fila de espera.
       </p>
     </div>
   );
