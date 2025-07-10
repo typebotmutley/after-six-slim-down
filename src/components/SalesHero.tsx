@@ -53,22 +53,15 @@ export const SalesHero = () => {
               <img
                 src={heroImage}
                 alt="Transformação real de mulher que emagreceu"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[500px] object-cover saturate-75"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-              
-              {/* Prova social visual sobre a imagem */}
-              <div className="absolute bottom-4 left-4 bg-background/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
-                <div className="flex items-center space-x-1 mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-sm font-semibold text-foreground">
-                  4.9 de 2.847 mulheres satisfeitas
-                </p>
-              </div>
             </div>
+            
+            {/* Legenda abaixo da imagem */}
+            <p className="text-center text-sm text-muted-foreground mt-4 font-medium">
+              Transformação real com o método das 18h – sem dietas extremas, sem academia obrigatória.
+            </p>
           </div>
         </div>
       </div>
